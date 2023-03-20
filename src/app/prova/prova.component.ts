@@ -8,21 +8,12 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-//adesso andiamo a vedere il ciclo di vita dei componenti
-//il primo step di vita del componente lo possiamo definire col ng OnInit{}
-//successivamente ngDoCheck{} che fara un controllo del componente appena creato
-//poi viene inizializzato il contenuto del componente
-//poi si ha il check del contenuto che e' stato inizializzato
-//succesivamente si ha un controllo della view della pagina
-//il componete dopo questi controlli rimane li fino a quando non lo distruggiamo
-// o decidiamo di cambiare la pagina
+
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css'],
 })
-//andiamo ad implementare tutti i cicli di vita del componente
-//ci dara un errore perche dobbiamo implementarli nel TS
 export class ProvaComponent
   implements
     OnInit,
@@ -33,8 +24,22 @@ export class ProvaComponent
     DoCheck,
     OnDestroy
 {
-  //string imterpolation
-  nomecane = 'Roger';
+  // questo e' uno string interpolation esempio con una variabile ed un testo
+
+  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+  originally bred for hunting.`;
+
+  //esempio di array di oggetti con dei dati che inseriremo nella nostra card
+  cane = [
+    {
+      nome: 'Roger',
+      razza: 'Golden',
+      descrizione: `The Golden is the smallest of the six original and distinct spitz breeds of dog
+    from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+    originally bred for hunting.`,
+    },
+  ];
   constructor() {
     console.log('costruttore');
   }
