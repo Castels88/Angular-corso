@@ -1,10 +1,15 @@
 <!--
-oggi andiamo a vedere il primo metodo di fata binding
-lo string interpolation
+oggi andiamo a vedere il property binding
+questo metodo viene utilizzando per cambiare un tag HTML o css in base all ' eventualita
+facciamo un esempio andiamo a stabilre se un bottone deve essere disable
+a secondo quello che abbimao nel file TS
+dobbiamo fare  in modo che la proprieta disable venga collegata al file TS
+andiamo nel TS =>
 
-per andare a prendere i dati dall array di oggetti che ho nel TS
-bado semplicemente dentro le doppie {{}} a prendermi il dato secondo
-le regole degli array ed oggetti di JS
+per associare la varibile basta semplicemente mettere la proprieta HTML tra[]e mettere
+uguale "il nome della variabile"
+adesso il bottone sara true o false a secondo del valore della variabile
+andiamo a fare una cosa un po piu complicata torniamo nel TS =>
 -->
 
 
@@ -19,7 +24,30 @@ le regole degli array ed oggetti di JS
     <p>{{cane[0].descrizione}}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button class="btn-card" mat-button>LIKE</button>
-    <button class="btn-card" mat-button>SHARE</button>
+    <button mat-raised-button class="btn-card" [disabled]="isDisabled" color="primary">LIKE</button>
+    <button mat-raised-button class="btn-card" color="primary">SHARE</button>
+  </mat-card-actions>
+</mat-card>
+<!-- vediamo di fare un altro esempio
+    nella seconda card facciamo in modo che in base alla proprieta
+  mi va a cambiare l immagine della card andiamo nel file TS =>-->
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="immagine" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button class="btn-card" color="primary">LIKE</button>
+    <button mat-raised-button class="btn-card" color="primary">SHARE</button>
   </mat-card-actions>
 </mat-card>
