@@ -1,9 +1,40 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<!--
+vediamo adesso come legare i dati da un componente ad un altro
+in modo da poter aver ad esempio lo stesso componente ma con dati diversi
+
+-abbiamo 2 tipi di data banding
+1)one-way
+questo vuol dire che stiamo portando i dati o dal componente
+visivo alla logica che ci sta dietro o viceversa
+di one-way abbiamo 3 metodi
+-string interpolation
+-property binding
+-event biding
+
+-vediamo il primo string muoviamoci sul prova.ts =>
+
+-il property binding invece non e' collegato ai dati bensi alle
+proprieta del HTML esempio possiamo avere una classe CSS mostrata
+solo in base ad un tipo di dato
+
+-il terzo invece fa ad associare ad un tag HTML per esempio un button
+un dato evento
+
+
+2)two-way
+vuol dire che stiamo portando i dati da entrambe le parti in contemporanea
+
+-->
+
+
 
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
+    <!--qui ho messo la variabile che ho creato sul TS
+    in Angular le variabili vanno col doppio {{}}
+    -->
+    <mat-card-title>{{nomecane}}</mat-card-title>
     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">

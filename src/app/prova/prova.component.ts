@@ -33,6 +33,8 @@ export class ProvaComponent
     DoCheck,
     OnDestroy
 {
+  //string imterpolation
+  nomecane = 'Roger';
   constructor() {
     console.log('costruttore');
   }
