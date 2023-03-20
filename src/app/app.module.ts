@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 //come prima cosa andiamo ad implementare il componente di material all'interno della app.module
 //e poi dobbiamo aggiungere il componente anche negli import
@@ -20,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSlideToggleModule,
     MatCardModule,
     MatButtonModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

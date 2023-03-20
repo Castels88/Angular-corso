@@ -1,1 +1,37 @@
-<app-prova></app-prova>
+<!--
+oggi andiamo a vedere l event bindig
+ossia andremo a collegare un azione fatta da un utente al nostro
+bottone che mettere in moto un event nel nostro TS
+in angular gli eventi onclick ad esempio hanno una loro sintassi
+si usa aprire (click)='in nome della funzione o variabile'
+Angular ci dara un errore perche il metodo o funzione onClick
+non esiste nella app.TS quindi dobbiamo andare a dichiararla nella app.TS=>
+
+adesso andiamo ad utilizzare gli inout di Material Design
+all input gli diamo l evento (input)
+e all input assegnamo la funzione onInput che dichiareremo con un semplice console.log()
+nel TS nella funzione dobbiamo dare un valore che TS lo vuole come any e facciamo il
+console.log di quel valore che mettere come attributo della funzione
+
+poi alla funzione usiamo proprio la keyword $event proprio di Angular che ordina ad
+angular di andare a prendere l event che succedera in quell input
+quindi facendo cosi raccogliero e mandero in console.log ogni singola lettera
+immessa nell input.
+
+altra cosa molto importante ricordiamoci che noi stiamo lavorando in TS
+quindi non possimao lasciare i type any per tutto quindi dobbiamo tipizzare
+nel nostro caso quindi nell input di un ipotetico form andiamo a vedere quale sarebbe
+il type corretto andiamo nel app.TS=>
+-->
+<button mat-raised-button (click)="onClick(this)" color="primary">Primary</button>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" (input)="onInput($event)">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+</form>

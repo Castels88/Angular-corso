@@ -1,15 +1,7 @@
 <!--
-oggi andiamo a vedere il property binding
-questo metodo viene utilizzando per cambiare un tag HTML o css in base all ' eventualita
-facciamo un esempio andiamo a stabilre se un bottone deve essere disable
-a secondo quello che abbimao nel file TS
-dobbiamo fare  in modo che la proprieta disable venga collegata al file TS
-andiamo nel TS =>
-
-per associare la varibile basta semplicemente mettere la proprieta HTML tra[]e mettere
-uguale "il nome della variabile"
-adesso il bottone sara true o false a secondo del valore della variabile
-andiamo a fare una cosa un po piu complicata torniamo nel TS =>
+oggi andiamo a vedere l event bindig
+ossia andremo a collegare un azione fatta da un utente al nostro
+bottone che mettere in moto un event nel nostro TS
 -->
 
 
@@ -20,7 +12,6 @@ andiamo a fare una cosa un po piu complicata torniamo nel TS =>
   </mat-card-header>
   <mat-card-content>
     <p>This card indeterminates progress bar.</p>
-    <!--questo e' uno string interpolation esempio-->
     <p>{{cane[0].descrizione}}</p>
   </mat-card-content>
   <mat-card-actions>
@@ -28,9 +19,7 @@ andiamo a fare una cosa un po piu complicata torniamo nel TS =>
     <button mat-raised-button class="btn-card" color="primary">SHARE</button>
   </mat-card-actions>
 </mat-card>
-<!-- vediamo di fare un altro esempio
-    nella seconda card facciamo in modo che in base alla proprieta
-  mi va a cambiare l immagine della card andiamo nel file TS =>-->
+<!-- -->
 
 <mat-card class="example-card">
   <mat-card-header>
@@ -38,7 +27,7 @@ andiamo a fare una cosa un po piu complicata torniamo nel TS =>
     <mat-card-title>Shiba Inu</mat-card-title>
     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="immagine" alt="Photo of a Shiba Inu">
+  <img mat-card-image [src]="immagine2" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
