@@ -1,21 +1,19 @@
 <!--
-in questa lezione vedremo come funzionano
-i two-way event binding che sono questi
-eventi che vanno a cambiare sia
-HTML che TS
+le direttive sono delle classi e servono per essere
+messe sugli elementi HTML per andare a cambiare il
+comportamento agli elementi
 
-in questa lezione andremo a cambiare il valore dell'input in modo che sia two-way
-binding ossia che possa essere cambiato il valore dall'utente che nel TS
+si dividono in 3 categorie
+-buildIn(ngClass, ngStyle, ngModel) modificano un
+comportamento
 
-per fare cio dobbiamo connettere l'event binding e il property binding
-per fare cio dobbiamo sostituire (input ) con [(ngModel)]='title' title
-perchè lo prendiamo come valore visibile
+-attribute (modificano comportamento o apparenze
+di un elemento)
 
-ngModule lo dobbiamo importare nel main TS senno ci da errore e si importa
-come FormsModule
+-structural(*ngIf, *ngFor cambiano il DOM aggiungendo
+o rimuovendo elementi)
 
-adesso noteremo che ngModel direttamente fara riferimento alla variabile title e nel
-HTML quando scriveremo nell input cambiera pure il testo sotto
+
 -->
 <button mat-raised-button (click)="onClick($event)" color="primary">Primary</button>
 <mat-form-field class="example-full-width">
