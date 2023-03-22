@@ -1,17 +1,19 @@
 <!--
-  è un altra direttiva che ci permette di cambiare lo stile css
-  in base ai dati del TS
-  noi abbiamo questo cerchio e vogliamo che cambi in base allo stato isOnline
-  andiamo ad aggiungere con le [ngStyle] al nostro cerchio e associamo un {nel quale
-  scriveremo il css} il css senza virgolette va scritto in CamelCase
-  con le virgolette normarlmente
+con questa direttiva possiamo andare a cambiare direttamente una classe
+del nostro css ed assegnarla ad un determinato tag
+facciamo un conditional rendering delle classi in base al prametro isOnline
+la direttiva si chiama [ngClass]="{'la classe css':il dato del mio array ecc}"
 -->
 
 <ul>
-  <li *ngFor="let persona of persone">
-    <!-- <div class="cerchio" [ngStyle]="{'background':'red'}"></div> -->
-    <!-- oppure possiamo usare il conditional rendering -->
-    <div class="cerchio" [ngStyle]="{background: persona.isOnline?'green':'red'}"></div>
+  <li *ngFor="let persona of persone; index of i">
+
+    <!--
+    in questo modo inoltre possiamo mettere tutte le condizioni che vogliamo
+    <div class="cerchio" [ngClass]="{'cerchioOnline':persona.isOnline,'cerchioOffline':!persona.isOnline}">i</div> -->
+    <!-- oppure si puo anche scrivere cosi pero cosi possiamo mettere molte meno
+    condizioni   -->
+    <div class="cerchio" [ngClass]="persona.isOnline?'cerchioOnline':'cerchioOffline'">i</div>
     <p>{{persona.nome}} {{persona.cognome}}</p>
   </li>
 </ul>

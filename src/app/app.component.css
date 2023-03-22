@@ -8,25 +8,29 @@
 .example-full-width {
   width: 100%;
 }
-.cerchioVerde {
-  width: 10px;
-  height: 10px;
-  background-color: green;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.cerchioRosso {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-}
 .cerchio {
-  width: 10px;
-  height: 10px;
+  width: 30px;
+  height: 30px;
   background-color: blue;
   border-radius: 50%;
   margin-right: 10px;
+  text-align: center;
 }
+.cerchioOnline {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: white;
+}
+.cerchioOffline {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  color: yellow;
+}
+
 li {
   margin-bottom: 10px;
   display: flex;
