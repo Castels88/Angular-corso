@@ -1,27 +1,17 @@
-<!-- è una altra direttiva che ci permette di verificare
-  diverse condizioni invece di usare multipli if
-  si utilizza ngSwitch . andiamo a metterlo tra []in modo da richiamare la variabile
-  number.
-  e poi dentro mettiamo i tag p che dovreanno tornare se il case è uguale al numero
-  della variabile.
-  importante i case vanno richiamati cosi *ngSwitchCase e ultima ipotesi
-  sempre con *ngSwitchDefault
+<!--
+  è un altra direttiva che ci permette di cambiare lo stile css
+  in base ai dati del TS
+  noi abbiamo questo cerchio e vogliamo che cambi in base allo stato isOnline
+  andiamo ad aggiungere con le [ngStyle] al nostro cerchio e associamo un {nel quale
+  scriveremo il css} il css senza virgolette va scritto in CamelCase
+  con le virgolette normarlmente
 -->
 
-
-<div [ngSwitch]="number">
-  <p *ngSwitchCase="1">uno</p>
-  <p *ngSwitchCase="2">due</p>
-  <p *ngSwitchCase="3">tre</p>
-  <p *ngSwitchCase="4">quattro</p>
-  <p *ngSwitchDefault>default</p>
-</div>
-<!-- vediamo con le stringhe
-attenzione per le stringhe dobbiamo riportare 2 volte le '' senno non li prende -->
-<div [ngSwitch]="stringa">
-  <p *ngSwitchCase="'elio'">uno</p>
-  <p *ngSwitchCase="'pippo'">due</p>
-  <p *ngSwitchCase="'paperino'">tre</p>
-  <p *ngSwitchCase="'pluto'">quattro</p>
-  <p *ngSwitchDefault>default</p>
-</div>
+<ul>
+  <li *ngFor="let persona of persone">
+    <!-- <div class="cerchio" [ngStyle]="{'background':'red'}"></div> -->
+    <!-- oppure possiamo usare il conditional rendering -->
+    <div class="cerchio" [ngStyle]="{background: persona.isOnline?'green':'red'}"></div>
+    <p>{{persona.nome}} {{persona.cognome}}</p>
+  </li>
+</ul>

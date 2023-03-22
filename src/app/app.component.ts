@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-corso';
-  isVisible = true;
-  isVisible2 = false;
+
   persone = [
     {
       nome: 'luca',
@@ -26,8 +25,7 @@ export class AppComponent {
       isOnline: false,
     },
   ];
-  number = 3;
-  stringa = 'pippo';
+
   onInput(e: Event) {
     this.title = (<HTMLInputElement>e.target).value;
   }
