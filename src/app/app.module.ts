@@ -8,7 +8,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-
+import { FormsModule } from '@angular/forms';
 //come prima cosa andiamo ad implementare il componente di material all'interno della app.module
 //e poi dobbiamo aggiungere il componente anche negli import
 //adesso prendiamo l esempio di html che abbiamo nella pagina dei material design e andiamo nel html di prova =>
@@ -22,6 +22,7 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

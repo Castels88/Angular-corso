@@ -15,8 +15,6 @@ import {
   styleUrls: ['./prova.component.css'],
 })
 export class ProvaComponent implements OnInit {
-  //creaiamo la variabile col valore opposto di quelo di partenza che abbiamo
-  //come possiamo legare questa variabile nel file HTML andiamo nel file HTML=>
   isDisabled = false;
   immagine2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
   cane = [
