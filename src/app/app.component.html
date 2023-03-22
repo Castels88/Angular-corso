@@ -1,38 +1,28 @@
 <!--
-è la prima direttiva structural che vediamo .
+è la seconda direttiva structural che vediamo .
 questa va ad aggiungere o rimuovere ementi del DOM
 questa renderizzazione puo avvenire in base ad una condizione
 
+*ngFor serve prorio a ciclare della variabili ed a renderizzare nell HTML
+i dati ciclati
 
 -->
-<button mat-raised-button (click)="onClick($event)" color="primary">Primary</button>
+<!-- <button mat-raised-button (click)="onClick($event)" color="primary">Primary</button>
 <mat-form-field class="example-full-width">
   <mat-label>Favorite food</mat-label>
   <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
-</mat-form-field>
+</mat-form-field> -->
+<!-- quindi noi vogliamo che vengano renderizzati gli li quindi al tag
+li andiamoi ad associare ngFor che si scrive cosi si mette una variabile let
+il nome della variabile che vogliamo assegnare of "della variabile che abbiamo nel
+app.TS "quindi persone"i nostri dati" e poi molto semplicemente dentro ai tag li
+dentro 2 {{la variabile.key del nostro oggetto}}
+possiamo anche mostrare l'indice dei nostri dati con l index che è
+gia dentro ngFor -->
 
-<!-- vedremo il nostro paragrafo perche la condizione è rispettata e quindi sarà true -->
-<p *ngIf="4<5">ciao sono un paragrafo</p>
-<!-- non verrà renderizzato perche 4 non è maggiore di 5 e quindi sarà false -->
-<p *ngIf="4>5">sono visibile?</p>
-<!-- andiamo a farlo con una variabile , quindi andiamo nel nostro app.ts => -->
-<p *ngIf="isVisible">con variabile</p>
-<!-- andiamo ad utilizzare una variabile template che nel nostro caso chiameremo
-bloccoElse  -->
-<p *ngIf="isVisible2;then bloccoIf else bloccoElse"></p>
-<!-- per richiamare la variabile template si usa il #con il
-  nome della variabile data prima .
-ma affinche funzioni e affinche else non ci dia errori dobbiamo
-1)mettere la condizione dell else in un ng-template
-<ng-template #bloccoElse>non sono visibile</ng-template>
--->
-<!-- oppure wrappare il tag p dentro un ng-template
-meglio utilizzare questo secondo metodo-->
-<ng-template #bloccoElse>
-  <p>non sono visibile #bloccoElse</p>
-</ng-template>
-<!-- oltre all'else siste anche il blocco then che funziona allo stesso modo  -->
-<ng-template #bloccoIf>
-  <p>sono visibile #bloccoIf</p>
-</ng-template>
-<!-- in poche parole il *ngIf è quello che serve per fare il conditional rendering di react -->
+
+<div *ngFor="let persona of persone; index as i">
+  <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
+  <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
+  <p>{{i}} {{persona.nome}} {{persona.cognome}}</p>
+</div>
