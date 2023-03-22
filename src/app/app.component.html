@@ -1,17 +1,7 @@
 <!--
-le direttive sono delle classi e servono per essere
-messe sugli elementi HTML per andare a cambiare il
-comportamento agli elementi
-
-si dividono in 3 categorie
--buildIn(ngClass, ngStyle, ngModel) modificano un
-comportamento
-
--attribute (modificano comportamento o apparenze
-di un elemento)
-
--structural(*ngIf, *ngFor cambiano il DOM aggiungendo
-o rimuovendo elementi)
+è la prima direttiva structural che vediamo .
+questa va ad aggiungere o rimuovere ementi del DOM
+questa renderizzazione puo avvenire in base ad una condizione
 
 
 -->
@@ -21,5 +11,28 @@ o rimuovendo elementi)
   <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
 </mat-form-field>
 
-
-<p>{{title}}</p>
+<!-- vedremo il nostro paragrafo perche la condizione è rispettata e quindi sarà true -->
+<p *ngIf="4<5">ciao sono un paragrafo</p>
+<!-- non verrà renderizzato perche 4 non è maggiore di 5 e quindi sarà false -->
+<p *ngIf="4>5">sono visibile?</p>
+<!-- andiamo a farlo con una variabile , quindi andiamo nel nostro app.ts => -->
+<p *ngIf="isVisible">con variabile</p>
+<!-- andiamo ad utilizzare una variabile template che nel nostro caso chiameremo
+bloccoElse  -->
+<p *ngIf="isVisible2;then bloccoIf else bloccoElse"></p>
+<!-- per richiamare la variabile template si usa il #con il
+  nome della variabile data prima .
+ma affinche funzioni e affinche else non ci dia errori dobbiamo
+1)mettere la condizione dell else in un ng-template
+<ng-template #bloccoElse>non sono visibile</ng-template>
+-->
+<!-- oppure wrappare il tag p dentro un ng-template
+meglio utilizzare questo secondo metodo-->
+<ng-template #bloccoElse>
+  <p>non sono visibile #bloccoElse</p>
+</ng-template>
+<!-- oltre all'else siste anche il blocco then che funziona allo stesso modo  -->
+<ng-template #bloccoIf>
+  <p>sono visibile #bloccoIf</p>
+</ng-template>
+<!-- in poche parole il *ngIf è quello che serve per fare il conditional rendering di react -->

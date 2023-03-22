@@ -12,7 +12,6 @@ export class AppComponent {
     this.title = 'ho cliccato sul bottone';
   }
 
-  onInput(e: Event) {
-    this.title = (<HTMLInputElement>e.target).value;
-  }
+  isVisible = true;
+  isVisible2 = false;
 }
