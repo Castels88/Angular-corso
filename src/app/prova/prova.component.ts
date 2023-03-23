@@ -5,36 +5,29 @@ import {
   AfterViewInit,
   Component,
   DoCheck,
+  Input,
+  OnChanges,
   OnDestroy,
   OnInit,
+  SimpleChanges,
 } from '@angular/core';
+//qui andremo ad utilizzare un nuovo decoratore @Input() al quale dobbiamo associare
+// una variabile con il suo tipo, dopo aver fatto questo andiamo nel component padre app.component=>
 
+//aggiungiamo l interfaccia onChanges in modo da salvare tutti i cambiamenti
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css'],
 })
-export class ProvaComponent implements OnInit {
-  isDisabled = false;
-  immagine2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
-  cane = [
-    {
-      nome: 'Roger',
-      razza: 'Golden',
-      descrizione: `The Golden is the smallest of the six original and distinct spitz breeds of dog
-    from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-    originally bred for hunting.`,
-    },
-  ];
-  constructor() {
-    console.log('costruttore');
-  }
+export class ProvaComponent implements OnInit, OnChanges {
+  @Input() data: any;
+  constructor() {}
 
   ngOnInit(): void {
-    console.log('onInit');
-
-    setInterval(() => {
-      this.isDisabled = !this.isDisabled;
-    }, 2000);
+    console.log(this.data);
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
   }
 }
