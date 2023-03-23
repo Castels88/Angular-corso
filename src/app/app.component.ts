@@ -13,8 +13,6 @@ import {
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'Angular-corso';
-  valore = 'Property-binding';
-  colore = 'green';
   persone = [
     {
       nome: 'luca',
@@ -50,7 +48,4 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {}
-  cambiaEvidenziatore(colore: string) {
-    this.colore = colore;
-  }
 }

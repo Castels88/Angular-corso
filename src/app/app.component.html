@@ -1,22 +1,3 @@
 <!--
-in questa lezione andremo a creare un direttiva
-sul terminale ng g d il nome della direttiva
-e best practice creare una cartella dentro app con le direttive
 
-una volta creata la nostra direttiva basta
-utilizzare il suo selector come attributo
-
-come possiamo fare se volessimo che al mouse hover
-la direttiva cambi colore . dobbiamo creare dei metodi nella
-direttiva andiamo nella direttiva.TS =>
-
-mettiamo la direttiva tra []='mettiamo qui una variabile '
-colore l abbiamo creata in app.TS
 -->
-<h2>Scegli il colore dell evidenziatore</h2>
-<div>
-  <input type="radio" name="coloreEvidenziatore" (click)="cambiaEvidenziatore('blue')">blu
-  <input type="radio" name="coloreEvidenziatore" (click)="cambiaEvidenziatore('pink')">rosa
-  <input type="radio" name="coloreEvidenziatore" (click)="cambiaEvidenziatore('purple')">viola
-</div>
-<p [appHighlight]=" colore">ciao sono un paragrafo</p>
