@@ -14,16 +14,7 @@ import {
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'Angular-corso';
   valore = 'Property-binding';
-  //si utilizza un altro decoratore @ViewChild('qui si mette
-  //il nome assegnato come attributo') poi si mette un nome
-  //riconoscitivo e come tipizzazione per best practice si
-  //usa ElementRef e questo punto TS ci dara un errore
-  //perche per lui il valore potra essere qualsiasi anche
-  //null or undefined per risolvere questo problema si mette
-  //valoreInput! vorra dire che non sara mai null o undefined.
-
-  //bene adesso andiamo ad inizializzare con onInit
-  @ViewChild('inputSaluti') valoreInput!: ElementRef<HTMLInputElement>;
+  colore = 'green';
   persone = [
     {
       nome: 'luca',
@@ -56,21 +47,10 @@ export class AppComponent implements OnInit, AfterViewInit {
       color: 'red',
     },
   ];
-  ngOnInit(): void {
-    console.log('ngOnInit');
-    console.log(this.valoreInput);
-  }
-  //noteremo che il valore in console risulta undefined
-  //perche ngOnInit inizializza solo il componente ma
-  //non lo runna affinche venga runnato e il valore
-  //renderizzato dobbiamo usare afterviewInit
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
-    console.log(this.valoreInput);
-  }
-  //affinche venga mandato in console il valore dell input
-  //bisogna mattere il nativeElement. il value dell input
-  onClick() {
-    console.log(this.valoreInput.nativeElement.value);
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {}
+  cambiaEvidenziatore(colore: string) {
+    this.colore = colore;
   }
 }
