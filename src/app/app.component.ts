@@ -40,38 +40,9 @@ export class AppComponent {
       color: 'red',
     },
   ];
-  onClick() {
-    this.persone = [
-      {
-        nome: 'mario',
-        cognome: 'rossi',
-        isOnline: true,
-        color: 'green',
-      },
-      {
-        nome: 'gianni',
-        cognome: 'neri',
-        isOnline: true,
-        color: 'pink',
-      },
-      {
-        nome: 'gigi',
-        cognome: 'marrone',
-        isOnline: false,
-        color: 'blue',
-      },
-      {
-        nome: 'fica',
-        cognome: 'qwerty',
-        isOnline: true,
-        color: 'yellow',
-      },
-      {
-        nome: 'pelato',
-        cognome: 'babbo',
-        isOnline: false,
-        color: 'red',
-      },
-    ];
+  //in cui scriveremo la nostra funzione che riceve l evento con attrubuto value che
+  //sara una stringa perche noi lo sappiamo e facciamo il console.log
+  riceviDatiEvento(value: string) {
+    console.log(value);
   }
 }

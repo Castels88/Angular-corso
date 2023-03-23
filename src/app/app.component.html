@@ -1,18 +1,7 @@
 <!--
-vediamo oggi come passare dei dati da un component padre ad un figlio
-passeremo i dati da app.component ad prova.component
-come possiamo connettere i 2 componenti andiamo nel prova.TS
-ci spostiamo su app-prova tag e mettiamo come attributo
-variabile del decoratore @input che sara uguale alla variabile che ha i dati
-attenzione molto importante l attributo data va messo tra [data] perche solo in
-questo modo Angular sara capace di caapire di prendere la variabile persone senno
-la riconosce come stringa
-
-andiamo nel prova.html => e modifichiamo un po html
-
-tornati all app component vediamo che possiamo anche aggiungere eventi che cambiano i dati
-ma noterremo che il console.log rimarra quello della prima variabile
-come facciamo a salvare i cambiamenti. andiamo nel prova.TS
+chiaramente questo sara il component ricevente e qui dobbiamo dirgli di ricevere il mandaDati
+come possiamo farlo dando come attributo con event binding
+mi raccomando ricordiamoci che stiamo ricevendo un valore ed e un evento
+quindi dobbiamo passare come valore il $event e terminiamo andando nel app.ts
 -->
-<app-prova [data]="persone"></app-prova>
-<button (click)="onClick()">dati cambiano</button>
+<app-prova (mandaDatiEvento)="riceviDatiEvento($event)"></app-prova>

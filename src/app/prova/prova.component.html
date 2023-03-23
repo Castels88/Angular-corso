@@ -1,7 +1,10 @@
 <!--
-questo e il component figlio e qui manderemo inostri dati
+  creiamo un bottone che possa mandare dati
+  quindi creiamo la nostra funzioone in prova.TS
+
+  andiamo ad assegnare al buttone l evento onClick
+
+  adesso dobbiamo muoverci sul padre andiamo nel app.html
 -->
 
-<div *ngFor="let persona of data">
-  <p [ngStyle]="{color:persona.color}">{{persona.nome}} {{persona.cognome}}</p>
-</div>
+<button (click)="mandaDati()">manda dati</button>
