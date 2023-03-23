@@ -13,6 +13,8 @@ import {
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'Angular-corso';
+  oggi = Date.now();
+  numero = 5;
   persone = [
     {
       nome: 'luca',

@@ -1,3 +1,18 @@
 <!--
-
+oggi parliamo delle pipe sono delle funzioni che possiamo fare
+dentro alle string interpolation
+questa e' una | pipe e dopo questa possiamo mettere delle
+funzioni inline
 -->
+
+<p>ciao benvenuti al {{title | uppercase}}</p>
+
+<p>ciao benvenuti al {{title | lowercase}}</p>
+
+<p>oggi e' {{oggi | date: 'd MMM yyyy - h:mm:ss' }}</p>
+
+<p>mi devi {{numero | number}}</p>
+
+<p>mi devi {{numero | percent}}</p>
+
+<p>mi devi {{numero | currency:'EUR'}}</p>
