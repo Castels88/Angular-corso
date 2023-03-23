@@ -35,6 +35,7 @@ export class HighlightDirective {
   cambiaColore(colore: string) {
     this.element.nativeElement.style.backgroundColor = colore;
   }
+
   upperCase(font: string) {
     this.element.nativeElement.style.fontWeight = font;
   }
