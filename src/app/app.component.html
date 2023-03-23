@@ -1,7 +1,18 @@
 <!--
-chiaramente questo sara il component ricevente e qui dobbiamo dirgli di ricevere il mandaDati
-come possiamo farlo dando come attributo con event binding
-mi raccomando ricordiamoci che stiamo ricevendo un valore ed e un evento
-quindi dobbiamo passare come valore il $event e terminiamo andando nel app.ts
+  prendere la reference da un elemento html in TS
+  la domanda e' come faccio a prendere questo value ed
+  utilizzarlo dentro la variabile persone del app.TS
+  - col property-binding
+  -oppure un altro metodo
 -->
-<app-prova (mandaDatiEvento)="riceviDatiEvento($event)"></app-prova>
+<!--
+  - col property-binding
+-->
+<input [value]="valore">
+<!--
+  - col riferimento di template
+  si crea mettendo come attributo #ilNomeDellaVariabile
+  ma come si collega al TS . spostiamoci sul file app.TS=>
+-->
+<input #inputSaluti value="ciao">
+<button (click)="onClick()"></button>
