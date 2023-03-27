@@ -13,17 +13,22 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
+import { ServizioProvaService } from '../servizi/servizio-prova.service';
 
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css'],
 })
-export class ProvaComponent implements OnInit, OnChanges {
-  constructor() {}
+export class ProvaComponent implements OnInit {
+  //come prima cosa lo dobbiamo inserire nel constructor il nostro servizioProva e vedremo
+  //che lo importerà in automatico.
+  //dobbiamo anche definirlo come private senno non funziona e poi nel ngOnInit che avviarà
+  //il componente mandiamo in console il nostro oggetto
 
-  ngOnInit(): void {}
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
+  constructor(private servizioProva: ServizioProvaService) {}
+
+  ngOnInit(): void {
+    console.log('dal prova component', this.servizioProva.persone);
   }
 }

@@ -5,49 +5,18 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { ServizioProvaService } from './servizi/servizio-prova.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
   title = 'Angular-corso';
   oggi = Date.now();
-  numero = 5;
-  persone = [
-    {
-      nome: 'luca',
-      cognome: 'rossi',
-      isOnline: true,
-      color: 'green',
-    },
-    {
-      nome: 'anna',
-      cognome: 'neri',
-      isOnline: true,
-      color: 'pink',
-    },
-    {
-      nome: 'marco',
-      cognome: 'verdi',
-      isOnline: false,
-      color: 'blue',
-    },
-    {
-      nome: 'leonardo',
-      cognome: 'qwerty',
-      isOnline: true,
-      color: 'yellow',
-    },
-    {
-      nome: 'pannocchia',
-      cognome: 'babbo',
-      isOnline: false,
-      color: 'red',
-    },
-  ];
-  ngOnInit(): void {}
-
-  ngAfterViewInit(): void {}
+  constructor(private servizioProva: ServizioProvaService) {}
+  ngOnInit(): void {
+    console.log('dall app component', this.servizioProva.persone);
+  }
 }

@@ -1,18 +1,19 @@
 <!--
-oggi parliamo delle pipe sono delle funzioni che possiamo fare
-dentro alle string interpolation
-questa e' una | pipe e dopo questa possiamo mettere delle
-funzioni inline
+i service sono utilissimi esi permettono la comunicazioni
+tra diversi componenti e permettono di non utilizzare
+più lo schema a matrioska che fino ad ora abbiamo
+utilizzato quindi non è più necessario
+prima passare al padre e poi al figlio o viceversa
+
+in più con i service il componente a solo il compito
+di gestire la parte visiva tutta la logica sarà
+implementata nei service
+
+come si crea un service ?
+si utilizza nel terminale ng g service 'nome del servizio'
+angular ci crea 2 file eliminiamo i lo spec.ts e creaimo
+la cartella servizi e mettiamo dentro il nostro file
+servizio-prova.ts
 -->
-
-<p>ciao benvenuti al {{title | uppercase}}</p>
-
-<p>ciao benvenuti al {{title | lowercase}}</p>
-
-<p>oggi e' {{oggi | date: 'd MMM yyyy - h:mm:ss' }}</p>
-
-<p>mi devi {{numero | number}}</p>
-
-<p>mi devi {{numero | percent}}</p>
-
-<p>mi devi {{numero | currency:'EUR'}}</p>
+<app-prova></app-prova>
+<h1>app works!</h1>
