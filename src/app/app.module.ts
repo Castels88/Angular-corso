@@ -12,6 +12,7 @@ import { HighlightDirective } from './direttive/highlight.directive';
 import { AboutComponent } from './componenti/about/about.component';
 import { DashboardComponent } from './componenti/dashboard/dashboard.component';
 import { ContattiComponent } from './componenti/contatti/contatti.component';
+import { ContattoComponent } from './componenti/contatto/contatto.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ContattiComponent } from './componenti/contatti/contatti.component';
     AboutComponent,
     DashboardComponent,
     ContattiComponent,
+    ContattoComponent,
   ],
   imports: [
     BrowserModule,
