@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './componenti/about/about.component';
-import { ContactComponent } from './componenti/contact/contact.component';
 import { DashboardComponent } from './componenti/dashboard/dashboard.component';
+import { ContattiComponent } from './componenti/contatti/contatti.component';
 
-//in quetsta const andiamo ad inserire il nostro path {}, ed il component che deve
-//essere visualizzato, bene mettendo il path e il component continiamo a vedere
-//tutti e 3 i componenti perchè? perchè non abbiamo definito
-//nella app-html un div in cui inserire i nostri componenti parti della route
-//questo div si chiama router-outlet andiamo nel app-component.html=>
-//per creare altre routes bisogna solo ricreare il path e component
+//al path mettendo /: posso aggiungere il parametro che
+//che mi serve. in questo modo se vado nell URL
+//mi prenderà il dato ma al momento non ritorna nulla
+//perche dobbiamo attivarlo con activatedRoute
+//andiamo nel contatti.ts=>
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contatti', component: ContattiComponent },
+  { path: 'contatti/:id', component: ContattiComponent },
 ];
 
 @NgModule({

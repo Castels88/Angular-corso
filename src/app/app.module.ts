@@ -10,11 +10,17 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './direttive/highlight.directive';
 import { AboutComponent } from './componenti/about/about.component';
-import { ContactComponent } from './componenti/contact/contact.component';
 import { DashboardComponent } from './componenti/dashboard/dashboard.component';
+import { ContattiComponent } from './componenti/contatti/contatti.component';
 
 @NgModule({
-  declarations: [AppComponent, HighlightDirective, AboutComponent, ContactComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    HighlightDirective,
+    AboutComponent,
+    DashboardComponent,
+    ContattiComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
