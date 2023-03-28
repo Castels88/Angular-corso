@@ -36,6 +36,5 @@ export class ServizioProvaService {
       color: 'red',
     },
   ];
-  //andiamo a richiamare il nostro servizio nel prova component.ts=>
   constructor() {}
 }

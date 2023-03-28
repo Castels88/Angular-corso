@@ -1,19 +1,13 @@
 <!--
-i service sono utilissimi esi permettono la comunicazioni
-tra diversi componenti e permettono di non utilizzare
-più lo schema a matrioska che fino ad ora abbiamo
-utilizzato quindi non è più necessario
-prima passare al padre e poi al figlio o viceversa
-
-in più con i service il componente a solo il compito
-di gestire la parte visiva tutta la logica sarà
-implementata nei service
-
-come si crea un service ?
-si utilizza nel terminale ng g service 'nome del servizio'
-angular ci crea 2 file eliminiamo i lo spec.ts e creaimo
-la cartella servizi e mettiamo dentro il nostro file
-servizio-prova.ts
+il routing è la possibilità di muoversi
+da una pagina ad un'altra'
+vediamocome si creano le routes.
+andiamo nel file app-routing.ts=>
+proviamo a fare un menu rudimentale
+come possiamo linkare il router a dei tag HTML?
 -->
-<app-prova></app-prova>
-<h1>app works!</h1>
+<a routerLink="">Home</a>
+<a routerLink="about">About</a>
+<a routerLink="contact">Contact</a>
+
+<router-outlet></router-outlet>
