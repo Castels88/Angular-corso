@@ -1,7 +1,14 @@
 <!--
-vediamo come gestire gli errori del routing
-e fare il redirect
-andiamo nel file di routing =>
+vediamo adesso come andiamo a proteggere le nostre routes
+come prima cosa dobbiamo creare un altro servizio per
+l autorizzazione che chiameremo auth.
+andiamo nel nostro service auth e creaimo una specie di funzione
+che riconosce se si logga o meno =>
+
+2) dopo aver creato il service auth dobbiamo generare la guard sempre
+nella cartella auth
+con ng g guard auth/auth e andiamo nel file creato=>
+
 -->
 <a routerLink="">Home</a>
 <a routerLink="about">About</a>
