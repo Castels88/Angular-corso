@@ -13,6 +13,7 @@ import { AboutComponent } from './componenti/about/about.component';
 import { DashboardComponent } from './componenti/dashboard/dashboard.component';
 import { ContattiComponent } from './componenti/contatti/contatti.component';
 import { ContattoComponent } from './componenti/contatto/contatto.component';
+import { NotfoundComponent } from './componenti/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ContattoComponent } from './componenti/contatto/contatto.component';
     DashboardComponent,
     ContattiComponent,
     ContattoComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
