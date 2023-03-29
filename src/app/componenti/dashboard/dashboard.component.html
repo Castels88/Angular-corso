@@ -1,9 +1,11 @@
 <p>dashboard works!</p>
 <!--
-in questa lezione inizieremo le http request
-come prima cosa dobbiamo importare il modulo http in angular
-import { HttpClientModule } from '@angular/common/http';
-2)dobbiamo preparare il nostro back-end su firebase
+in questa lezione vedremo come inserire dati nel nostro DB
+come prima cosa è meglio creare dei servizi
+che vadano a gestire le chiamate http
+andiamo a prendere il link da firebase
+poi creiamo il nostro servizio che chiameremo firebase
+per gestire i dati=>
 -->
 <form [formGroup]="homeform" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
