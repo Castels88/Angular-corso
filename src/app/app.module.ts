@@ -7,6 +7,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './direttive/highlight.directive';
 import { AboutComponent } from './componenti/about/about.component';
@@ -33,7 +35,9 @@ import { NotfoundComponent } from './componenti/notfound/notfound.component';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    MatFormFieldModule,
     FormsModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

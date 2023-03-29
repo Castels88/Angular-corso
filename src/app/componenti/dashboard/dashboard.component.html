@@ -1,1 +1,58 @@
 <p>dashboard works!</p>
+<!-- in Angular prima cosa da fare in un form è
+1) associare una variabile template in modo da poterlo richiamare
+e dobbiamo anche assegnare un valore a questa variabile
+ed angular ha un suo valore pre impostato per i form ossia il
+ngForm
+2)una volta definita la variabile ngForm Angular ci da direttamente
+la possibilita di aggiungere metodi al form come onSubmit che
+chiaramente dobbiamo aggiungere anche al file TS
+3)come facciamo ad associare gli input ?
+dobbiamo assegnare la variabile #homeForm alla funzione di
+onSubmit(homeForm) e ci da errore perche non abbiamo messo
+nessun valore nel metodo del file TS
+in questo modo Angular terra conto del mio form e di tutto quello
+che ci sta sotto
+4)ma ancora gli input non sono associati come li associamo?
+-prima cosa da fare e mettere il tag name negli input
+-aggiungere i type corretti per ogni tag input
+-aggiungere un ngModel ad ogni input perche questo metodo
+permetterà di creare i controlli sugli input
+
+---------------------------
+vediamo come mettere dei limiti ai nostri tag input con il tag required
+andiamo nel tag email aggiungiamo il tag required ed email
+ora andiamo nel button e gli diciamo di disabilitarlo se non è valid
+perche abbiamo 3 stati valid untouched e pristine
+
+--------------
+vediamo come sfruttare le classi create da material
+avendo detto che gli input creati da merial hanno delle classi
+questo c permette di sfruttarle a nostro favore
+mettiamo caso vogliamo che per ogni input invalid vogliamo
+il background rosso
+dobbiamo sfruttare la classe ng-invalid creata da material nel css
+-->
+<form #homeForm="ngForm" (ngSubmit)="onSubmit(homeForm)">
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" name="nome" required ngModel>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Cognome</mat-label>
+    <input matInput type="text" name="cognome" ngModel>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" required email ngModel>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Colori</mat-label>
+    <mat-select name="colore">
+      <mat-option value="rosso">Rosso</mat-option>
+      <mat-option value="blu">Blu</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" [disabled]="!homeForm.valid" type="submit">invia</button>
+</form>

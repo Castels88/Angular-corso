@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+/* mettiamo sempre l 'important per essere sicuri
+che lo sovrascriva */
+input.ng-touched.ng-invalid {
+  border-color: red !important;
+}
+input.ng-valid {
+  border-color: green !important;
+}
