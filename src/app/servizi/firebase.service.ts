@@ -5,18 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class FirebaseService {
-  //nel servizio come prima cosa andiamo riempire il constructor
-  //aggiungendo http module della lezione precedente
-  //
   constructor(private http: HttpClient) {}
 
-  //adesso andiamo a creare le funzioni per le http request
-  //gli sto dicendo prendi la variabile http.fammi una post.('qui URL,qui
-  //ci va il body cioè il contenuto della chiamata che è un {} ')
-  //non scordiamoci la tipizzazione quindi andiamo a metterli come parametri
-  //importante mettere il return senno non parte
-  //adesso dobbiamo importare questo servizio nel dashboard.ts=>
+  //andiamo a scrivere la nostra funzione per il get
+  //stavolta pero senza body perche i dati che riceviamo hanno gia un body
+  //adesso invece di amdare in dasboard andiamo in contatti.ts=>
   insertPersona(url: string, body: {}) {
     return this.http.post(url, body);
+  }
+  getPersone(url: string) {
+    return this.http.get(url);
   }
 }
