@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HighlightDirective } from './direttive/highlight.directive';
 import { AboutComponent } from './componenti/about/about.component';
 import { DashboardComponent } from './componenti/dashboard/dashboard.component';
@@ -38,6 +38,7 @@ import { NotfoundComponent } from './componenti/notfound/notfound.component';
     MatFormFieldModule,
     FormsModule,
     MatSelectModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
