@@ -1,24 +1,16 @@
 <p>dashboard works!</p>
 <!--
-  i reactive form sono dei form interamente gestiti nel
-  file TS.
-  come prima cosa andiamo nel TS e creaimo la variabile homeform=>
-2)per sincronizzare il ts nel html andiamo sul tag form
-e tramite propertyBinding mettiamo formGroup
-3)dobbiamo associare i tag quindi andiamo ad utilizzare il tag
-formcontrolName
-4)adesso  altro step è creare l evento submit del form .
-per fare cio dobbiamo aggiungere al form l evento ngSubmit
-5)adesso dobbiamo aggingere la validazione torniamo al file TS=>
+in questa lezione inizieremo le http request
+come prima cosa dobbiamo importare il modulo http in angular
+import { HttpClientModule } from '@angular/common/http';
+2)dobbiamo preparare il nostro back-end su firebase
 -->
 <form [formGroup]="homeform" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
     <mat-label>Nome</mat-label>
     <input matInput type="text" name="nome" formControlName="nome">
   </mat-form-field>
-  <!-- vediamo come possiamo far spuntare un tag p che ci dica di
-  compilare i campi mancanti. dobbiamo creare un tag p aggiungergli
-un ngIF che si riferisce al homeform.get() -->
+  <!-- -->
   <p *ngIf="!homeform.get('nome').valid && homeform.get('nome').touched">Inserisci un nome</p>
   <mat-form-field appearance="fill">
     <mat-label>Cognome</mat-label>

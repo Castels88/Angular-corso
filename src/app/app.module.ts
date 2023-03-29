@@ -16,7 +16,7 @@ import { DashboardComponent } from './componenti/dashboard/dashboard.component';
 import { ContattiComponent } from './componenti/contatti/contatti.component';
 import { ContattoComponent } from './componenti/contatto/contatto.component';
 import { NotfoundComponent } from './componenti/notfound/notfound.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +39,7 @@ import { NotfoundComponent } from './componenti/notfound/notfound.component';
     FormsModule,
     MatSelectModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
