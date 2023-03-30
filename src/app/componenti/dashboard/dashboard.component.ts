@@ -18,17 +18,11 @@ export class DashboardComponent implements OnInit {
       email: new FormControl(null, [Validators.required, Validators.email]),
       colore: new FormControl(),
     });
-    //dopo che abbiamo inserito il nostro servizio firebase
-    //andiamo a dichiararlo con la funzione e dentro la funzione
-    //passiamo l url di firebase.json molto importante perchè firebase
-    //lo richiedo ed il body ossia cosa vogliamo inviare e infine
-    //per far si che i dati vengano inviati dobbiamo mettere il subscribe
   }
 
   onSubmit() {
     console.log(this.homeform);
-    //vediamo come mandare i dati del form quindi nel body della chiamata
-    //vado a mettere
+
     this.firebase
       .insertPersona(
         'https://angular-corso-default-rtdb.europe-west1.firebasedatabase.app/.json',
@@ -38,6 +32,18 @@ export class DashboardComponent implements OnInit {
           email: this.homeform.value.email,
           colore: this.homeform.value.colore,
         }
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
+  //andiamo a creare la ondelete che funzionerà sul button creato
+
+  onDeletePersona() {
+    this.firebase
+      .deletePersona(
+        'https://angular-corso-default-rtdb.europe-west1.firebasedatabase.app/',
+        '-NRhc6ldKizR7OlZkMEo'
       )
       .subscribe((data) => {
         console.log(data);

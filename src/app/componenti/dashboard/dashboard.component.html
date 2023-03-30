@@ -1,7 +1,7 @@
 <p>dashboard works!</p>
 <!--
-in questa lezione vedremo come prendere dati dal nostro DB
-quindi andiamo nel servizio che gestisce le chiamate DB firebase=>
+in questa lezione vedremo come eliminare i dati dal nostro DB
+andiamo prima a creare il metodo nel servixo=>
 -->
 <form [formGroup]="homeform" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
@@ -28,3 +28,5 @@ quindi andiamo nel servizio che gestisce le chiamate DB firebase=>
 
   <button mat-raised-button color="primary" type="submit" [disabled]="!homeform.valid">invia</button>
 </form>
+
+<button mat-raised-button color="primary" (click)="onDeletePersona()">Elimina utente</button>
