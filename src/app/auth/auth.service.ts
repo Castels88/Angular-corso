@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from './../modelli/user.model';
 
 @Injectable({
@@ -14,7 +15,7 @@ export class AuthService {
 
   //creiamo la varibiale user e associamo la classe User
   user: User;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   isAuthenticated() {
     return this.isLoggedIn;
@@ -47,5 +48,6 @@ export class AuthService {
     this.isLoggedIn = false;
     this.user = null;
     localStorage.removeItem('user');
+    this.router.navigate(['/signin']);
   }
 }
