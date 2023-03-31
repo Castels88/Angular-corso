@@ -37,13 +37,24 @@ export class DashboardComponent implements OnInit {
         console.log(data);
       });
   }
-  //andiamo a creare la ondelete che funzionerà sul button creato
 
   onDeletePersona() {
     this.firebase
       .deletePersona(
         'https://angular-corso-default-rtdb.europe-west1.firebasedatabase.app/',
         '-NRhc6ldKizR7OlZkMEo'
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
+
+  onPatchPersona() {
+    this.firebase
+      .patchPersona(
+        'https://angular-corso-default-rtdb.europe-west1.firebasedatabase.app/',
+        '-NRn1iJ6CljjMDqSQchM',
+        { email: 'prova@provagmail.com' }
       )
       .subscribe((data) => {
         console.log(data);

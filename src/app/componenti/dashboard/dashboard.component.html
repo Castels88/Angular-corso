@@ -1,7 +1,6 @@
 <p>dashboard works!</p>
 <!--
-in questa lezione vedremo come eliminare i dati dal nostro DB
-andiamo prima a creare il metodo nel servixo=>
+in questa lezione vedremo come modifcare i dati  con patch=>
 -->
 <form [formGroup]="homeform" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
@@ -30,3 +29,6 @@ andiamo prima a creare il metodo nel servixo=>
 </form>
 
 <button mat-raised-button color="primary" (click)="onDeletePersona()">Elimina utente</button>
+
+
+<button mat-raised-button color="primary" (click)="onPatchPersona()">Modifica persona</button>
