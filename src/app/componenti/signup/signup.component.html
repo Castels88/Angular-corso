@@ -1,0 +1,19 @@
+<h1>Registrazione !</h1>
+<!--4) adesso che il form è fatto andiamo nel signup.ts
+a gestire onsubmit=>
+5) adesso che il form funziona andiamo su firebase nel
+browser e andiamo a creare l autenticazione
+6)adesso che anche firebase è fatto andiamo nel
+nostro auth servizio=> -->
+<form #homeform="ngForm" (ngSubmit)="onSubmit(homeform)">
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" ngModel required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" name="password" ngModel required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!homeform.valid">invia</button>
+</form>

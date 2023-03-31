@@ -17,6 +17,7 @@ import { ContattiComponent } from './componenti/contatti/contatti.component';
 import { ContattoComponent } from './componenti/contatto/contatto.component';
 import { NotfoundComponent } from './componenti/notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './componenti/signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     ContattiComponent,
     ContattoComponent,
     NotfoundComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
