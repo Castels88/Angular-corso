@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FirebaseService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private authService: AuthService) {}
 
   //andiamo a creare la patchPersona
   //che avra 3 parametri l url e l id ma anche un oggetto
@@ -16,7 +17,7 @@ export class FirebaseService {
     return this.http.post(url, body);
   }
   getPersone(url: string) {
-    return this.http.get(url);
+    return this.http.get(`${url}?auth=${this.authService.user.token}`);
   }
   deletePersona(url: string, id: string) {
     return this.http.delete(`${url}/${id}.json`);
